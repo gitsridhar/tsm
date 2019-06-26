@@ -16,9 +16,9 @@ int TSM(int graph[][V], int s) {
     
     do {
         for(int i=0; i<vertex.size(); i++) {
-            cout << vertex[i] << endl;
+            //cout << vertex[i] << endl;
         }
-        cout << "---" << endl;
+        //cout << "---" << endl;
     }while(next_permutation(vertex.begin(), vertex.end()));
     
     int min_path = INT_MAX;
@@ -29,9 +29,9 @@ int TSM(int graph[][V], int s) {
         int k = s;
         
         for(int i=0; i<vertex.size(); i++) {
-            cout << k << endl;
-            cout << vertex[i] << endl;
-            cout << graph[k][vertex[i]] << endl;
+            //cout << k << endl;
+            //cout << vertex[i] << endl;
+            //cout << graph[k][vertex[i]] << endl;
             current_pathweight += graph[k][vertex[i]];
             k = vertex[i];
         }
@@ -51,7 +51,10 @@ int main() {
         {20, 25, 30,  0 }};
     
     int s = 0;
-    cout << TSM(graph, s) << endl;
+    cout << "Result : " << TSM(graph, s) << endl;
+    cout << "Result : " << TSM(graph, 1) << endl;
+    cout << "Result : " << TSM(graph, 2) << endl;
+    cout << "Result : " << TSM(graph, 3) << endl;
     
     return 0;
 }
